@@ -72,15 +72,16 @@ def init(site_config, package=None, filter=None):
 	env = 'development'
 	
 	# see if this server has a assigned environment
-	site_environ_file = site_config.replace('.yaml', '.env')
-	if(os.path.exists(site_environ_file)):
-		with open(site_environ_file) as f:
-			env = f.read().strip()
+	if(site_config):
+		site_environ_file = site_config.replace('.yaml', '.env')
+		if(os.path.exists(site_environ_file)):
+			with open(site_environ_file) as f:
+				env = f.read().strip()
 	
 	# allow overriding at the command-line for debug/emergencies
 	if('ENVIRONMENT' in os.environ):
 		env = os.environ['ENVIRONMENT']
-		warnings.warn("Overriding Django settings with os.environ['ENVIRONMENT'] ('%s')" % env)
+		# warnings.warn("Overriding Django settings with os.environ['ENVIRONMENT'] ('%s')" % env)
 	
 	# load the default config file.
 	default = load_yaml('default.yaml', package=package)
@@ -103,9 +104,9 @@ def init(site_config, package=None, filter=None):
 	# if there's a site config file, merge that in as well
 	# (NOTE: only secure params like database details and
 	# external passwords are kept in the site config.)
-	if(os.path.isfile(site_config)):
+	if(site_config and os.path.isfile(site_config)):
 		environ = merge(load_yaml(site_config, package=None), environ)
-	else:
+	elif(site_config):
 		warnings.warn("Cannot find site-specific Django settings in %r" % site_config)
 
 	# the optional filter is a method that returns updates to the
