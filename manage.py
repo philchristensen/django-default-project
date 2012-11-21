@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# projectname
+# ##PROJECTNAME##
 # Copyright (c) 2012 Phil Christensen
 #
 #
@@ -8,13 +8,13 @@
 
 import sys, os
 
-from project import conf
+from ##PROJECTNAME## import conf
 
-conf.init('/etc/project.yaml', package='project.conf')
+conf.init('/etc/##PROJECTNAME##.yaml', package='##PROJECTNAME##.conf')
 
 # some debug pages use this variable (improperly, imho)
 from django.conf import settings
-settings.SETTINGS_MODULE = 'project.settings'
+settings.SETTINGS_MODULE = '##PROJECTNAME##.settings'
 
 from django.core import management
 u = management.ManagementUtility(sys.argv)

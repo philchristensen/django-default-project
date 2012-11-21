@@ -1,0 +1,12 @@
+[submodule "src/project/static/js/libs/less-js"]
+	path = src/project/static/js/libs/less-js
+	url = git://github.com/cloudhead/less.js.git
+[submodule "src/project/static/bootstrap"]
+	path = src/project/static/bootstrap
+	url = git://github.com/twitter/bootstrap.git
+[submodule "src/project/static/js/libs/jquery"]
+	path = src/project/static/js/libs/jquery
+	url = git://github.com/jquery/jquery.git
+[submodule "src/project/static/js/libs/jquery-ui"]
+	path = src/project/static/js/libs/jquery-ui
+	url = git://github.com/jquery/jquery-ui.git

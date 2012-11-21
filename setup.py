@@ -1,4 +1,4 @@
-# projectname
+# ##PROJECTNAME##
 # Copyright (c) 2012 Phil Christensen
 #
 #
@@ -18,7 +18,7 @@ os.environ['COPYFILE_DISABLE'] = 'true'
 def autosetup():
 	from setuptools import setup, find_packages
 	return setup(
-		name			= "",
+		name			= "##PROJECTNAME##",
 		version			= "1.0",
 		
 		include_package_data = True,

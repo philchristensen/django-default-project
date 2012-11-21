@@ -1,4 +1,4 @@
-# projectname
+# ##PROJECTNAME##
 # Copyright (c) 2012 Phil Christensen
 #
 #

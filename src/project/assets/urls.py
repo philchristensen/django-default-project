@@ -10,7 +10,7 @@ Django URL routes for static assets.
 
 from django.conf.urls.defaults import patterns, url
 
-urlpatterns = patterns('project.assets.views',
+urlpatterns = patterns('##PROJECTNAME##.assets.views',
 	url(r'(?P<path>.*)$', 'serve_static'),
 )
 

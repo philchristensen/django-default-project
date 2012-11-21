@@ -1,4 +1,4 @@
-# projectname
+# ##PROJECTNAME##
 # Copyright (c) 2012 Phil Christensen
 #
 #
@@ -16,8 +16,8 @@ import os
 os.environ['PYTHON_EGG_CACHE'] = '/tmp'
 
 from fuwt_common import conf
-conf.init('/etc/project.yaml', package='project.conf')
+conf.init('/etc/##PROJECTNAME##.yaml', package='##PROJECTNAME##.conf')
 
 import django.core.handlers.wsgi
-os.environ['DJANGO_SETTINGS_MODULE'] = 'project.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = '##PROJECTNAME##.settings'
 application = django.core.handlers.wsgi.WSGIHandler()

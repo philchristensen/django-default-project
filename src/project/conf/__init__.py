@@ -89,13 +89,13 @@ def init(site_config, package=None, filter=None):
 		project_template_dir = pkg.resource_filename(package.split('.')[0], 'templates')
 		default.setdefault('TEMPLATE_DIRS', []).append(project_template_dir)
 	except Exception, e:
-		warnings.warn("Couldn't append project template dir: %s" % e)
+		warnings.warn("Couldn't append ##PROJECTNAME## template dir: %s" % e)
 	
 	try:
 		project_static_dir = pkg.resource_filename(package.split('.')[0], 'static')
 		default.setdefault('STATICFILES_DIRS', []).append(project_static_dir)
 	except Exception, e:
-		warnings.warn("Couldn't append project static dir: %s" % e)
+		warnings.warn("Couldn't append ##PROJECTNAME## static dir: %s" % e)
 	
 	# merge in the environment-specific config
 	environ = merge(load_yaml('%s.yaml' % env, package=package), default)

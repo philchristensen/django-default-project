@@ -2,8 +2,8 @@
     "DEBUG": true,
     "TEMPLATE_DEBUG": true,
     
-    "ADMIN_FOR": ['project.settings'],
-    "ROOT_URLCONF" : "project.urls",
+    "ADMIN_FOR": ['##PROJECTNAME##.settings'],
+    "ROOT_URLCONF" : "##PROJECTNAME##.urls",
     
     "ADMINS":[
         ["Admin", "admin@example.com"]
@@ -15,9 +15,9 @@
     "DATABASES" : {
         "default" : {
             "ENGINE": "django.db.backends.postgresql_psycopg2",
-            "NAME": "",
-            "USER": "",
-            "PASSWORD": "",
+            "NAME": "##PROJECTNAME##",
+            "USER": "##PROJECTNAME##",
+            "PASSWORD": "##PROJECTNAME##",
             "HOST": "localhost",
             "PORT": ""
         }
@@ -43,7 +43,7 @@
             }
         },
         'loggers': {
-            'project': {
+            '##PROJECTNAME##': {
                 'handlers':['default'],
                 'propagate': false,
                 'level':'DEBUG',
@@ -112,7 +112,7 @@
         # staticfile directories.
         # 
         # However, some stuff is really site-wide (like admin CSS
-        # changes), so some magic code runs that appends the src/project/static
+        # changes), so some magic code runs that appends the src/##PROJECTNAME##/static
         # directory to this list (but as an absolute path, of course).
     ],
     
@@ -135,7 +135,7 @@
         # template directories.
         # 
         # However, some stuff is really site-wide (like admin template
-        # changes), so some magic code runs that appends the src/project/templates
+        # changes), so some magic code runs that appends the src/##PROJECTNAME##/templates
         # directory to this list (but as an absolute path, of course).
     ],
 
