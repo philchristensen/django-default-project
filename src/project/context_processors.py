@@ -1,4 +1,4 @@
-# antioch
+# ##PROJECTNAME##
 # Copyright (c) 1999-2012 Phil Christensen
 #
 #
@@ -10,7 +10,7 @@ Add some essential variables to the template environment.
 
 from django.conf import settings
 
-from antioch import assets
+from ##PROJECTNAME## import assets
 
 def default_variables(request):
 	"""

@@ -1,4 +1,4 @@
-# antioch
+# ##PROJECTNAME##
 # Copyright (c) 1999-2012 Phil Christensen
 #
 #
