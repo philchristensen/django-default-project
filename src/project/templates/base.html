@@ -15,29 +15,15 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/{{ JQUERY_VERSION }}/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery/dist/jquery.min.js"><\/script>')</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-dist/jquery.min.js"><\/script>')</script>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/{{ JQUERY_UI_VERSION }}/jquery-ui.min.js"></script>
-<script>window.jQuery(document).draggable || document.write('<script src="{{ STATIC_URL }}/js/libs/jquery-ui/dist/jquery-ui.min.js"><\/script>')</script>
-
-<script src="{{ STATIC_URL }}js/global.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script>window.jQuery(document).draggable || document.write('<script src="{{ STATIC_URL }}/js/libs/jquery-ui-dist/jquery-ui.min.js"><\/script>')</script>
 
 {% block header %}{% endblock %}
 </head>
 <body>
-
-	<script src="{{ STATIC_URL }}bootstrap/js/bootstrap-transition.js"></script>
-	<script src="{{ STATIC_URL }}bootstrap/js/bootstrap-alert.js"></script>
-	<script src="{{ STATIC_URL }}bootstrap/js/bootstrap-modal.js"></script>
-	<script src="{{ STATIC_URL }}bootstrap/js/bootstrap-dropdown.js"></script>
-	<script src="{{ STATIC_URL }}bootstrap/js/bootstrap-scrollspy.js"></script>
-	<script src="{{ STATIC_URL }}bootstrap/js/bootstrap-tab.js"></script>
-	<script src="{{ STATIC_URL }}bootstrap/js/bootstrap-tooltip.js"></script>
-	<script src="{{ STATIC_URL }}bootstrap/js/bootstrap-popover.js"></script>
-	<script src="{{ STATIC_URL }}bootstrap/js/bootstrap-button.js"></script>
-	<script src="{{ STATIC_URL }}bootstrap/js/bootstrap-collapse.js"></script>
-	<script src="{{ STATIC_URL }}bootstrap/js/bootstrap-carousel.js"></script>
-	<script src="{{ STATIC_URL }}bootstrap/js/bootstrap-typeahead.js"></script>
+	<script src="{{ STATIC_URL }}bootstrap/docs/assets/js/bootstrap.min.js"></script>
 </body>
 </html>
