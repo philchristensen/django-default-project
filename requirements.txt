@@ -1,2 +1,4 @@
 Django>=1.4,<1.5
-
+setuptools-git>=0.4.2
+PyYAML>=3.10
+psycopg2>=2.4.5
